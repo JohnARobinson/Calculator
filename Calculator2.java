@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.lang.Math;
 
 
-public class Calculator3 implements ActionListener{
+public class Calculator2 implements ActionListener{
 
     
     public double total = 0;
@@ -26,7 +26,7 @@ public class Calculator3 implements ActionListener{
 
     protected static JTextField outIn;
 
-    public Calculator3()
+    public Calculator2()
     {
         //JFrame
         JFrame frame = new JFrame();
@@ -157,7 +157,7 @@ public class Calculator3 implements ActionListener{
     public static void main(String[] args) {
     
 
-        Calculator3 calc = new Calculator3();
+        Calculator2 calc = new Calculator2();
     
     }
 
@@ -469,7 +469,10 @@ public class Calculator3 implements ActionListener{
           int start = 0;                  //ending of current parentheses
           String parentheses_String = ""; //inner parentheses equation string
 
+            total = algebraMachine(s);
+            return total;
 
+            /* 
             while(containsSym == true)
             {
                 for(int j = 0; j < c.length; j++)
@@ -516,10 +519,11 @@ public class Calculator3 implements ActionListener{
                 }
                 break;
             }
+            */
             //System.out.println(s);
             
-            total = algebraMachine(parentheses_String);
-            return total;
+            
+            //return total;
             //return 0;
     }
 
